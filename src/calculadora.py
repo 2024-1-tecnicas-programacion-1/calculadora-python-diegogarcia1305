@@ -13,8 +13,15 @@ def calcular(numero1, numero2, operacion):
         case '/':
             # Operación división
             respuesta = numero1 / numero2
+        case '^':
+            # Operacion potencia
+            respuesta = numero1 ** numero2
+        case '%':
+            # Operacion modulo
+            respuesta = numero1 % numero2
         case _:
             raise ValueError("Operación inválida.")
+        
 
         # TODO: DEBES COLOCAR TU CÓDIGO AQUÍ# TODO: DEBES CREAR AQUÍ LOS CASES PARA LA OPERACIÓN DE LA POTENCIA Y EL MÓDULO, COMPROBANDO LOS SÍMBOLOS ^ Y %.
 
@@ -27,7 +34,7 @@ if __name__ == '__main__':
     print("Ingrese el número 2")
     numero2 = int(input())
     # TODO: EN LA SIGUIENTE LÍNEA DEBES ADICIONAR EL SÍMBOLO DE ^ Y % PARA QUE LE APAREZCA AL USUARIO.
-    print("Ingrese la operación (+, -, *, /)")
+    print("Ingrese la operación (+, -, *, /, ^, % )")
     operacion = input()
 
     resultado = calcular(numero1, numero2, operacion)
